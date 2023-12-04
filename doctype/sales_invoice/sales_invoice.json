@@ -1,0 +1,70 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-12-04 02:01:13.741654",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice_date",
+  "billing_address",
+  "invoice_status",
+  "invoice_items"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date"
+  },
+  {
+   "fieldname": "billing_address",
+   "fieldtype": "Text",
+   "label": "Billing Address"
+  },
+  {
+   "fieldname": "invoice_status",
+   "fieldtype": "Select",
+   "label": "Invoice Status",
+   "options": "Draft\nIssued\nPaid"
+  },
+  {
+   "fieldname": "invoice_items",
+   "fieldtype": "Table",
+   "label": "Invoice Items",
+   "options": "Invoice Items"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Customer",
+   "link_fieldname": "customer"
+  },
+  {
+   "link_doctype": "Sales Representative",
+   "link_fieldname": "employee"
+  }
+ ],
+ "modified": "2023-12-04 02:07:25.881912",
+ "modified_by": "Administrator",
+ "module": "Sales Management",
+ "name": "Sales Invoice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
